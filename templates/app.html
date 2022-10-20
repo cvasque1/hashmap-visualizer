@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename="app.css")}}">
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+        <div class="site">
+            <div class="site-board">
+                <div class="table">
+                    <div class="row-index">
+                        <p class="square">0</p>
+                        <div class="blocks" id="blocks0">
+                        </div>
+                    </div>
+                    <div class="row-index">
+                        <p class="square">1</p>
+                        <div class="blocks" id="blocks1">
+                        </div>
+                    </div>
+                    <div class="row-index">
+                        <p class="square">2</p>
+                        <div class="blocks" id="blocks2">
+                        </div>
+                    </div>
+                    <div class="row-index">
+                        <p class="square">3</p>
+                        <div class="blocks" id="blocks3">
+                        </div>
+                    </div>
+                    <div class="row-index">
+                        <p class="square">4</p>
+                        <div class="blocks" id="blocks4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-input">
+                <div class="inputs">
+                    <button class="operation" id="insert">Insert</button>
+                    <button class="operation" id="delete">Delete</button>
+                    <button class="operation" id="reset">Reset</button>
+                    <div class="form">
+                            <div class="key-field">
+                                <label for="key">Key:</label>
+                                <br>
+                                <input type="text" name="key" id="key" placeholder="Kachow" required="">
+                                <br>
+                            </div>
+                            <div class="value-field">
+                                <label for="value">Value:</label>
+                                <br>
+                                <input type="text" name="value" id="value" placeholder="3 kachows" required="">
+                            </div>
+                            <button id="formButton" type="submit" onclick="submit_entry();">Submit</button>
+                    </div>
+                    <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+                    <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+  <script src="{{ url_for('static',filename='app.js') }}"></script>
+</html>
